@@ -22,7 +22,7 @@
             <h1 class="font-logo-and-titles">ohmyfood</h1>
         </div>
         <div>
-            <input class="search_field" type="text" placeholder="Paris, Belleville">
+            <input class="location" type="text" placeholder="&#xf3c5; Paris, Belleville">
         </div>
     </header>
 
@@ -30,16 +30,16 @@
         <section> 
             <h2>Réserver le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-            <button>Explorer nos restaurants</button>
+            <a class="my-button" href="#Restaurants">Explorer nos restaurants</a>
         </section>
         <section>
                 <h2>Fonctionnement</h2>
-                <div class="label">Choisissez un restaurant</div>
-                <div class="label">Composez votre menu</div>
-                <div class="label">Dégustez au restaurant</div>
+                <div class="label"><span class="fa-solid fa-mobile-screen-button grey-icon"></span>Choisissez un restaurant</div>
+                <div class="label"><span class="fa-solid fa-list-ul grey-icon"></span>Composez votre menu</div>
+                <div class="label"><span class="fa-solid fa-store purple-icon"></span>Dégustez au restaurant</div>
         </section>
         <section>
-            <h2>Restaurants</h2>
+            <h2><a id="Restaurants"></a>Restaurants</h2>
             <div>
                 <!---- les 4 cartes-->
             </div>
@@ -48,9 +48,9 @@
 
     <footer>
         <p class="footer-title">oh my food</p>
-        <ul clas="footer-list">
-            <li><a href="#">Proposer un restaurant</a></li>
-            <li><a href="#">Devenir partenaire</a></li>
+        <ul class="footer-list">
+            <li><a href="#"> <span class="fa-solid fa-utensils"></span> Proposer un restaurant</a></li>
+            <li><a ref="#"> <span  class="fa-solid fa-hands-helping"></span> Devenir partenaire</a></li>
             <li><a href="#">Mentions légales</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
