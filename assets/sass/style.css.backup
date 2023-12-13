@@ -1,0 +1,129 @@
+/****** General ***********/
+
+/*.font-logo-and-titles
+{
+    font-family: 'Shrikhand';
+}
+
+html {
+    font-family: 'Roboto';
+    min-width: 1024px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+:root {
+    --main-color: white;
+    --main-bg-color:#F6F6F6 ;
+    --card-bg-color: white;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.main-subtitle {
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/*TITLES
+
+h1, h2 {
+
+}
+
+h1, h2, h3 {
+ 
+}
+
+
+/*LIST
+
+li {
+   
+}
+
+ul {
+    
+}
+
+
+/*HEADER
+
+.logo {
+
+}
+
+.header {
+
+}
+
+.header_nav {
+
+}
+
+
+.nav_link {
+   
+}
+
+.nav_link:hover {
+
+}
+
+a {
+
+}
+
+.section-title {
+
+}
+
+
+/*FONCTIONNEMENT
+
+
+
+/*RESTAURANTs
+
+
+.card {
+
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+
+
+
+
+/*FOOTER
+.footer {
+
+}
+
+.footer_containers {
+
+}
+
+.footer_container {
+
+}
