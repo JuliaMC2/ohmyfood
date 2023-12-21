@@ -17,6 +17,7 @@
   --pink:#fcc0ce;
   --pink-button:#ff79da;
   --shadow-color: #00000040 ;
+  --button-hover-shadow-color: #00000059;
   --grey-icon:#7E7E7E;
   --main-font-color: #000000;
 }
@@ -30,6 +31,7 @@ html {
 
 body {
   margin: 0px;
+  position: relative;
 }
 
 section {
@@ -40,13 +42,20 @@ section {
 }
 
 .my-button {
+  position: relative;
   text-decoration: none;
   border-radius: 25px;
-  box-shadow: 10px 5px 10px 5px var(--shadow-color);
+  box-shadow: 0px 4px 10px 0px var(--shadow-color);
   background-color: var(--purple);
   color: var(--button-font-color);
   background: linear-gradient(0deg, var(--purple) 0%, var(--pink-button) 100%);
   padding: 15px;
+  transition-property: box-shadow, background;
+  transition-duration: 400ms;
+}
+.my-button:hover {
+  box-shadow: 0px 4px 15px 0px var(--button-hover-shadow-color);
+  background: linear-gradient(0deg, #ae80e5 0%, #fface8 100%);
 }
 
 a {
@@ -72,7 +81,8 @@ input:focus {
   display: flex;
   text-align: left;
   margin-bottom: 20px;
-  width: 100%;
+  width: fit-content;
+  align-self: normal;
   padding-left: 55px;
 }
 
@@ -120,6 +130,77 @@ h4 {
   font-weight: 300;
 }
 
+.loader-spec {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-bg-color);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  animation: loader-display 3s linear;
+  animation-fill-mode: forwards;
+}
+
+.loader {
+  width: 200px;
+  height: 200px;
+  border: 3px solid var(--purple);
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 3s linear;
+  margin-top: 300px;
+}
+
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: var(--pink-button) transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes heart-filler {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader-display {
+  0% {
+    opacity: 1;
+    z-index: 1000;
+  }
+  99% {
+    opacity: 1;
+    z-index: 1000;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1000;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
 /*HEADER*/
 .location-container {
   display: flex;
@@ -128,7 +209,6 @@ h4 {
   background-color: var(--location-bg-color);
   padding: 15px 0px 15px 0px;
   box-shadow: 0px 3px 3px 0px inset var(--shadow-color);
-  margin: 0px -3px 0px -3px;
 }
 
 .location {
@@ -228,6 +308,7 @@ h4 {
   justify-content: center;
   justify-content: space-between;
   width: 90%;
+  gap: 18px;
 }
 
 .restaurants-cards .card {
@@ -297,6 +378,7 @@ h4 {
 .restaurants-heart-default {
   color: var(--main-font-color);
   display: block;
+  animation: heart-filler 300ms linear;
 }
 
 #heart-toggle input:checked ~ .restaurants-heart-default {
@@ -313,6 +395,7 @@ h4 {
 
 #heart-toggle input:checked ~ .restaurants-heart-liked {
   display: block;
+  animation: heart-filler 300ms linear;
 }
 
 /*FOOTER*/
