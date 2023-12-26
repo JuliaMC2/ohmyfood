@@ -1,0 +1,34 @@
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes heart-filler {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes loader-display {
+  0% {
+    opacity: 1;
+    z-index: 1000;
+  }
+  99% {
+    opacity: 1;
+    z-index: 1000;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1000;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+/*# sourceMappingURL=style_keyframes.css.map */

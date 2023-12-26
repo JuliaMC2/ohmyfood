@@ -1,0 +1,11 @@
+.grey-icon {
+  margin-right: 20px;
+  color: var(--grey-icon);
+}
+
+.purple-icon {
+  margin-right: 20px;
+  color: var(--purple);
+}
+
+/*# sourceMappingURL=style_mixins.css.map */
