@@ -47,5 +47,17 @@
     width: 100%;
   }
 }
+@keyframes menu-displayer {
+  0% {
+    scale: 0;
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+    visibility: visible;
+  }
+}
 
 /*# sourceMappingURL=style_keyframes.css.map */

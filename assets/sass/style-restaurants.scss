@@ -154,6 +154,7 @@ h4 {
     display: flex;
     flex-direction: column;
     position: relative;
+    width: calc(100% - 35px);
 }
 
 .restaurants-section {
@@ -184,7 +185,11 @@ h4 {
     margin-bottom: 10px;
     border-radius: 15px;
     background-color: var(--main-color);
+    animation: menu-displayer 450ms ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: calc(var(--sibling-index) * 100ms);
     position: relative;
+    visibility:hidden;
         a {
             display: flex;
             flex-direction: row;
@@ -192,19 +197,24 @@ h4 {
 }
 
 .restaurants-cards .card-title {
+    display: inline-block;
     width: 100%;
     margin-top: 15px;
     margin-bottom: 4px;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
     
 .restaurants-cards .card-description {
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
+    width: 100%;
     line-height: 20px;
     margin-block-start: 0em;
     margin-block-end: 0em;
     text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .restaurant-price {
