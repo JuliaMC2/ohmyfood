@@ -172,18 +172,19 @@ h4 {
     width: 90%;
     gap: 0px;
     align-self: center;
+    margin-bottom: 30px;
 }
 
 .restaurants-cards .card {
     display: flex;
     width: 100%;
-    height: 69px;
+    height: 74px;
     flex-direction: column;
     gap: 4px;
+    margin-bottom: 10px;
     border-radius: 15px;
     background-color: var(--main-color);
     position: relative;
-    padding-bottom: 5px;
         a {
             display: flex;
             flex-direction: row;
@@ -221,6 +222,7 @@ h4 {
     flex-wrap: nowrap;
     width: 100%;
     height: 74px;
+    border-radius: 0px 15px 15px 0px;
     cursor: pointer;
     overflow: hidden;
 
@@ -237,9 +239,9 @@ h4 {
         color: var(--main-color);
         background-color: var(--green);
         width: 69px;
-        height: 50px;
+        height: 47px;
         text-align: center;
-        padding-top: 24px;
+        padding-top: 27px;
         right: -70px;
     }
 }
@@ -286,6 +288,17 @@ h4 {
     display: block;
     animation: heart-filler 300ms linear;
 }
+
+#green-check:has(+ .restaurant-omni-positionner input:checked ) {
+    animation: green-check-slider-in 300ms linear;
+    animation-fill-mode: forwards;
+    --duration: 300ms;
+}
+#green-check:has(+ .restaurant-omni-positionner input:not(:checked) ) {
+    animation: green-check-slider-out 300ms linear;
+    animation-fill-mode: forwards;
+}
+
 
 .button-postionner {
     display: flex;

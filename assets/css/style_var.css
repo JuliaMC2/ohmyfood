@@ -5,7 +5,6 @@
   --card-bg-color: white;
   --footer-bg-color:#353535;
   --location-color:#353535;
-  --arrow-color: #353535
   --location-bg-color:#EAEAEA;
   --footer-font-color:white;
   --button-font-color:white;
@@ -20,6 +19,7 @@
   --button-hover-shadow-color: #00000059;
   --grey-icon:#7E7E7E;
   --main-font-color: #000000;
+  --duration: 0s;
 }
 
 /*# sourceMappingURL=style_var.css.map */
