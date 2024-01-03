@@ -1,0 +1,107 @@
+@media screen and (min-width: 1025px) {
+
+    html {
+        min-width: 1025px;
+        max-width: 1440px;
+    }
+
+
+/*TITLES*/
+
+h2 {
+   padding-left: 0px;
+   padding-top: 45px;
+}
+
+h3 {
+    padding-left: 0px;
+    margin-left: 20%;
+}
+/*HEADER*/
+
+header {
+    margin: 0px;
+}
+
+
+/*BODY*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.heart-toggle {
+    overflow:visible;
+
+    input{
+        display: none;
+        position: relative;
+    }
+    span {
+        position: relative;
+        margin-left: 24px;
+        right: 0px;
+        top: 7px;
+
+    }
+}
+
+.restaurant-omni-positionner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart-positionner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.restaurants-section {
+    width: 73%;
+}
+
+.restaurants-cards {
+    width: 60%;
+}
+
+.green-line {
+    margin-left: 20%;
+}
+
+/*FOOTER*/
+
+    .footer-list {
+        flex-direction: row;
+        justify-content: right;
+        margin-bottom: 0px;
+     }
+    
+     footer {
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 30px 0px 0px 0px;
+        gap: 7px;
+        height: 114px;
+        width: 100%;
+        
+        li {
+             margin-bottom: 5px;
+             padding-left: 15px;
+        }
+    
+    }
+
+    .footer-title {
+        margin: 0px 60px 0px 30px;
+        padding-top: 0px;
+        font-size: 16px;
+        line-height: 19px;
+     }
+    
+    }

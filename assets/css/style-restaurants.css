@@ -11,6 +11,7 @@ html {
 
 header {
   display: flex;
+  justify-content: space-between;
   vertical-align: middle;
 }
 
@@ -74,6 +75,10 @@ h1, h2 {
   padding: 16px 0px 11px 0px;
 }
 
+h1 {
+  width: 100%;
+}
+
 h2 {
   justify-content: left;
   padding-left: 20px;
@@ -88,15 +93,6 @@ h3 {
   letter-spacing: 0em;
   text-align: left;
   padding-left: 20px;
-}
-
-h4 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 21px;
-  letter-spacing: 0em;
-  text-align: left;
-  width: 100%;
 }
 
 /*HEADER*/
@@ -134,20 +130,48 @@ h4 {
   flex-direction: column;
   position: relative;
 }
+.restaurant-omni-positionner input {
+  opacity: 0;
+  top: -30px;
+  left: -30px;
+}
+.restaurant-omni-positionner span {
+  position: absolute;
+  border: none;
+  font-size: 21px;
+  color: var(--main-color);
+  background-color: var(--green);
+  width: 69px;
+  height: 47px;
+  text-align: center;
+  padding-top: 27px;
+  right: -70px;
+}
 
 .restaurant-text-position {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: left;
   padding-left: 20px;
+  width: calc(100% - 70px);
+}
+
+.green-check {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   width: 100%;
+  height: 74px;
+  border-radius: 0px 15px 15px 0px;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .course-details {
   display: flex;
   flex-direction: column;
   position: relative;
-  width: calc(100% - 35px);
+  width: calc(100% - 30px);
 }
 
 .restaurants-section {
@@ -197,6 +221,11 @@ h4 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .restaurants-cards .card-description {
@@ -219,32 +248,10 @@ h4 {
   padding-top: 39px;
 }
 
-.green-check {
+.heart-positionner {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 100%;
-  height: 74px;
-  border-radius: 0px 15px 15px 0px;
-  cursor: pointer;
-  overflow: hidden;
-}
-.green-check input {
-  opacity: 0;
-  top: -30px;
-  left: -30px;
-}
-.green-check span {
-  position: absolute;
-  border: none;
-  font-size: 21px;
-  color: var(--main-color);
-  background-color: var(--green);
-  width: 69px;
-  height: 47px;
-  text-align: center;
-  padding-top: 27px;
-  right: -70px;
+  flex-direction: column;
+  position: relative;
 }
 
 .heart-toggle {
@@ -267,36 +274,35 @@ h4 {
   font-size: 21px;
 }
 
-.restaurants-heart-default {
+.heart-toggle input:not(:checked) ~ .restaurants-heart-default {
   color: var(--main-font-color);
-  display: block;
+  display: inline-block;
   animation: heart-filler 300ms linear;
 }
 
-#heart-toggle input:checked ~ .restaurants-heart-default {
+.heart-toggle input:checked ~ .restaurants-heart-default {
   display: none;
 }
 
-.restaurants-heart-liked {
+.heart-toggle input:not(:checked) ~ .restaurants-heart-liked {
+  display: none;
+}
+
+.heart-toggle input:checked ~ .restaurants-heart-liked {
   background: linear-gradient(0deg, var(--pink-button) 0%, var(--purple) 100%);
-  -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: none;
-}
-
-#heart-toggle input:checked ~ .restaurants-heart-liked {
-  display: block;
+  color: transparent;
+  display: inline-block;
   animation: heart-filler 300ms linear;
 }
 
-#green-check:has(+ .restaurant-omni-positionner input:checked) {
+.restaurant-text-position:has(.restaurant-omni-positionner input:checked) {
   animation: green-check-slider-in 300ms linear;
   animation-fill-mode: forwards;
   --duration: 300ms;
 }
 
-#green-check:has(+ .restaurant-omni-positionner input:not(:checked)) {
+.restaurant-text-position:has(.restaurant-omni-positionner input:not(:checked)) {
   animation: green-check-slider-out 300ms linear;
   animation-fill-mode: forwards;
 }

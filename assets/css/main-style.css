@@ -330,7 +330,7 @@ h4 {
   animation: heart-filler 300ms linear;
 }
 
-#heart-toggle input:checked ~ .restaurants-heart-default {
+.heart-toggle input:checked ~ .restaurants-heart-default {
   display: none;
 }
 
@@ -342,7 +342,7 @@ h4 {
   display: none;
 }
 
-#heart-toggle input:checked ~ .restaurants-heart-liked {
+.heart-toggle input:checked ~ .restaurants-heart-liked {
   display: block;
   animation: heart-filler 300ms linear;
 }
