@@ -255,7 +255,6 @@ h4 {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  justify-content: space-between;
   width: 90%;
   gap: 18px;
 }

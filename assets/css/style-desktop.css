@@ -13,7 +13,7 @@
   }
   .restaurants-cards {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-evenly;
   }
   .restaurants-cards .card {
     width: 40%;

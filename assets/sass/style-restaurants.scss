@@ -164,7 +164,9 @@ h3 {
     flex-direction: row;
     justify-content: left;
     padding-left: 20px;
-    width: calc(100% - 70px);
+    width: calc(100% - 90px);
+    min-width: calc(100% - 90px);
+    max-width: 100%;
 }
 
 .green-check {
@@ -182,7 +184,9 @@ h3 {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: calc(100% - 30px);
+    width: calc(100% - 50px);
+    min-width: calc(100% - 50px);
+    max-width: calc(100% - 50px);
 }
 
 .restaurants-section {
