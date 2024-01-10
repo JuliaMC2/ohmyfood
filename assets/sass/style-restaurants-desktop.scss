@@ -1,9 +1,9 @@
 @media screen and (min-width: 1025px) {
 
-    html {
-        min-width: 1025px;
-        max-width: 1440px;
-    }
+html {
+    min-width: 1025px;
+    max-width: 1440px;
+}
 
 
 /*TITLES*/
@@ -75,33 +75,32 @@ main {
 
 /*FOOTER*/
 
-    .footer-list {
-        flex-direction: row;
-        justify-content: right;
-        margin-bottom: 0px;
-     }
-    
-     footer {
-        justify-content: flex-start;
-        flex-direction: row-reverse;
-        align-items: center;
-        padding: 30px 0px 0px 0px;
-        gap: 7px;
-        height: 114px;
-        width: 100%;
-        
-        li {
-             margin-bottom: 5px;
-             padding-left: 15px;
-        }
-    
-    }
+.footer-list {
+    flex-direction: row;
+    justify-content: right;
+    margin-bottom: 0px;
+}
 
-    .footer-title {
-        margin: 0px 60px 0px 30px;
-        padding-top: 0px;
-        font-size: 16px;
-        line-height: 19px;
-     }
-    
+footer {
+justify-content: flex-start;
+flex-direction: row-reverse;
+align-items: center;
+padding: 30px 0px 0px 0px;
+gap: 7px;
+height: 114px;
+width: 100%;
+
+    li {
+            margin-bottom: 5px;
+            padding-left: 15px;
     }
+}
+
+.footer-title {
+    margin: 0px 60px 0px 30px;
+    padding-top: 0px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+}
